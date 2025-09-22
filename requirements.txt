@@ -1,0 +1,9 @@
+pip install -r requirements.txt
+
+# Core dependencies
+sqlite3       # Built-in with Python, listed for clarity
+unittest      # Built-in, used for testing
+
+# Optional: for enhanced database interaction or future expansion
+pandas        # For data analysis or tabular display
+tabulate      # For pretty-printing tables in CLI
