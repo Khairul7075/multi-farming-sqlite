@@ -49,11 +49,45 @@ if __name__ == "__main__":
     show_compatible_farming()
     show_seasonal_plan()
 
-# How to use main.py 
+# How to use in main.py 
 
 query = "SELECT name_en FROM Crops;"
 results = execute_query(query)
 for row in results:
-    print(row[0])
+    print(row[0]) 
+
+# How to use in main.py 
+from models.field import Field
+
+def list_all_fields():
+    fields = Field.get_all_fields()
+    for field in fields:
+        print(field)
+
+if __name__ == "__main__": 
+    list_all_fields()
+# How to use in main.py  
+from models.animal import Animal
+
+def list_all_animals():
+    animals = Animal.get_all_animals()
+    for animal in animals:
+        print(animal)
+
+if __name__ == "__main__":
+    list_all_animals() 
+# How to use in main.py   
+from models.crop import Crop
+
+def list_all_crops():
+    crops = Crop.get_all_crops()
+    for crop in crops:
+        print(crop)
+
+if __name__ == "__main__":
+    list_all_crops()
+
+
+
 
 
