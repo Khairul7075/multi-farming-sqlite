@@ -1,12 +1,11 @@
- /* main.py file is the entry point for interacting with your SQLite database. It typically handles:
-
+ """ main.py file is the entry point for interacting with your SQLite database. It typically handles:
 Connecting to the database
-
 Running queries (like seasonal plans or compatibility checks)
+Displaying results in a readable format """ 
 
-Displaying results in a readable format */   
+import sqlite3 
+from db_manager import execute_query
 
-import sqlite3
 
 DB_PATH = "database/multi_farming.db"
 
@@ -50,6 +49,11 @@ if __name__ == "__main__":
     show_compatible_farming()
     show_seasonal_plan()
 
+# How to use main.py 
 
+query = "SELECT name_en FROM Crops;"
+results = execute_query(query)
+for row in results:
+    print(row[0])
 
 
